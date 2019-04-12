@@ -8,8 +8,9 @@
     values('$codigo','$nombre',$cantidad)";
 
     if ($conn->query($sql)===true) {
-        echo "Producto registrado con exito.<br> ";
-        echo "<br><a href='index.php'>Regresar</a>";
+        echo "<script languaje='javascript'>alert('producto registrado satisfactoriamente')</script> ";
+        //echo "<br><a href='index.php'>Regresar</a>";
+        header ("refresh:0; url=index.php");
     } else {
         echo "Error: ".$sql . "<br>".$conn->error;
     }
