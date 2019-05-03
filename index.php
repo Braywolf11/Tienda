@@ -68,8 +68,8 @@
                         echo "<td>".$row['codigo_pro']."</td>";
                         echo "<td>".$row['nombre_pro']."</td>";
                         echo "<td>".$row['cantidad']."</td>";
-                        echo "<td><a href = 'update.php'><img src = 'icons/edit.png' width='30'></a></td>";
-                        echo "<td><a href = 'delete.php'><img src = 'icons/delete.png' width='30'></a></td>";
+                        echo "<td><a href = 'form_update.php?id=".$row['id']."& cod=".$row['codigo_pro']."& nom=".$row['nombre_pro']."& can=".$row['cantidad']."'><img src = 'icons/edit.png' width='30'></a></td>";
+                        echo "<td><a href = 'delete.php?id=".$row['id']."& cod=".$row['codigo_pro']."'><img src = 'icons/delete.png' width='30'></a></td>";
                     echo "<tr>";
                 }
             }else

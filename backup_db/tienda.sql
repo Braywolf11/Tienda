@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-04-2019 a las 02:50:23
+-- Tiempo de generación: 03-05-2019 a las 04:58:43
 -- Versión del servidor: 10.1.29-MariaDB
 -- Versión de PHP: 7.2.0
 
@@ -38,6 +38,17 @@ CREATE TABLE `productos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`id`, `codigo_pro`, `nombre_pro`, `cantidad`, `ruta_imagen`, `estado`) VALUES
+(3, '123457', 'tomate', 60, NULL, NULL),
+(4, '123456', 'aguacate', 60, NULL, NULL),
+(5, '123456', 'aguacate', 60, NULL, NULL),
+(6, '123456', 'sapote', 60, NULL, NULL),
+(7, '123456', 'pera', 60, NULL, NULL);
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -55,7 +66,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
