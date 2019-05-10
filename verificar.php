@@ -1,22 +1,34 @@
 <?php
 // donde dice $variableUsuario tienes que poner la variable en la cual tienes el nombre del user para validarlo, supongo que ha de ser una POST, pero tu lo modificas
  
-$email =$email = $_POST ["emailsignup"];
-$contraseña = $_POST ["passwordsignup"];
+$firsname = $_POST ["firsnamesignup"];
+$lastname = $_POST ["lastnamesignup"];
+$email = $_POST ["emailsignup"];
+$user_image="images/avatar_default.png";
+
+
+$pswd = password_hash($_POST ["passwordsignup"],PASSWORD_DEFAULT);
  
- $q = mysql_query("SELECT * FROM usuarios WHERE email = '$email'")
- $c = mysql_query("SELECT * FROM usuarios WHERE password = '$contraseña'")
- //verificamos si el user exite con un condicional
- if( mysql_num_rows($q) == 0 && mysql_num_rows($c) == 0){
-// mysql_num_rows <- esta funcion me imprime el numero de registro que encontro 
-// si el numero es igual a 0 es porque el registro no exite, en otras palabras ese user no esta en la tabla miembro por lo tanto se puede registrar
- 
-echo "el user es valido";
+$sql_validacion = "SELECT * FROM usuarios WHERE email = '$email'";
+$result=$conn->query($sql_validacion);
+
+if ($result->num_row == 0){
+    $sql="INSERT INTO usuarios (firstname,lastname,email,pasdword,photo) VALUES('$firsname','$lastname','$email,$pswd,$user_image)"
+
+
+  
+ if ($conn->query($sql)===true) {
+    echo "<script languaje='javascript'>alert('registrado registrado satisfactoriamente')</script> ";
+    //echo "<br><a href='index.php'>Regresar</a>";
+    header ("refresh:0; url=login.php");
+} else {
+    echo "Error: ".$sql . "<br>".$conn->error;
 }
-else{
-//caso contario (else) es porque ese user ya esta registrado
- 
-echo 'el user ya esta registrado, ingresa otro';
+}else {
+    echo "<script languaje='javascript'>alert('usuario ya existe')</script> ";
+    //echo "<br><a href='index.php'>Regresar</a>";
+    header ("refresh:0; url=login.php");
 }
+
  
 ?>

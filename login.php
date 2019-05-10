@@ -29,7 +29,7 @@
                     <a class="hiddenanchor" id="tologin"></a>               
                     <div id="wrapper">
                         <div id="login" class="animate form">
-                            <form  action="verificar.php" autocomplete="on"> 
+                            <form  action="insertlogin.php" autocomplete="on"> 
                                 <h1>Log in</h1> 
                                 <p> 
                                     <label for="username" class="uname" > Your email or username </label>
@@ -63,6 +63,14 @@
                                 <p> 
                                     <label for="usernamesignup" class="uname" >Your Lastname</label>
                                     <input id="usernamesignup" name="lastnamesignup" required="required" type="text" placeholder="lastname" />
+                                </p>
+                                <p> 
+                                    <label for="sexsignup" class="uname" >Your sex</label><br>
+                                    <select name="sex" class="form_control">
+                                    <option value="1"></option>                                    
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Femanino</option>
+                                    </select>
                                 </p>
                                 <p> 
                                     <label for="emailsignup" class="youmail"  > Your email</label>
