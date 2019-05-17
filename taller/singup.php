@@ -18,7 +18,7 @@ Copy this code in your html file.
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
     <style>
     label {
-        color: #FF0000;
+        color: #FFFFFF  ;
     }
     </style>
 </head>
@@ -28,7 +28,7 @@ Copy this code in your html file.
             <i class="fa fa-arrow-left" onclick="Back()"></i>
         </div>
         <p class="h2 text-center">Form</p>
-        <form action="" method="post">
+        <form action="insert.php" method="post">
             <div class="preview text-center">
                 <img class="preview-img" src="http://simpleicon.com/wp-content/uploads/account.png" alt="Preview Image" width="200" height="200"/>
                 <div class="browse-button">
@@ -54,7 +54,7 @@ Copy this code in your html file.
             </div>
             <div class="form-group">
                 <label><h4>Confirm Password:</h4></label>
-                <input class="form-control" type="Confirm" name="confirm_password" required placeholder="Enter Password"/>
+                <input class="form-control" type="password" name="confirm_password" required placeholder="Enter Password"/>
                 <span class="Error"></span>
             </div>
             <div class="form-group">
